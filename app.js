@@ -5,9 +5,16 @@ const port = 3000
 
 app.engine('handlebars', exphbs.engine({defaultLayout: 'main'}))
 app.set('view engine', 'handlebars')
+app.use(express.urlencoded({ extended: true}))
 
 app.get('/', (req, res) => {
   res.render('index')
+})
+
+app.post('/', (req, res) => {
+  res.render('index')
+  console.log(req.body)
+  console.log(req.body.target)
 })
 
 app.listen(port, () => {
