@@ -1,5 +1,5 @@
 function generateTrashTalk(option) {
-  if (option.target === undefined) return 
+  if (option.target === undefined) return '請選擇一個對象！'
   const target = option.target
   const targetCHT = target === 'engineer' ? '工程師' : target === 'designer' ? '設計師' : '創業家'
   const task = {
